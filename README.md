@@ -1,2 +1,2 @@
-# third-time
-Third Time Tracker is a timer app that enables simple, effective use of an amazing productivity method.
+# Third Time Tracker
+Third Time Tracker is an app that implements the Third Time method. This is a productivity method that alternates between work and break blocks similar to Pomodoro. It is much more flexible and effective than pomodoro though! Work for as long as you like, then take a break for 1/3 the amount of time you worked for. This app features a stop watch for work blocks, automatic 1/3 ratio timer for breaks, settings that allow you to adjust the ratio, and more! Set goals, view stats, and get stuff done without burning out. Its sleek, beautiful UI is something you won't mind keeping on your screen while you work. Learn more about the Third Time Method here: https://optima.blog/productivity/third-time-a-better-way-to-work/
