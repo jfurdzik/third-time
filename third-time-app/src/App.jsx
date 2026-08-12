@@ -6,7 +6,6 @@ import './App.css'
 import Stopwatch from './components/Stopwatch/Stopwatch'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>

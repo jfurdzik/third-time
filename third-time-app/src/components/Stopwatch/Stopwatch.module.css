@@ -1,0 +1,9 @@
+body {
+    background-image: linear-gradient(to bottom, #8FBEFF, #8E1FD8);
+    width: 100%;
+    color: black;
+}
+
+.timebox {
+    background-color: #8FBEFF;
+}
