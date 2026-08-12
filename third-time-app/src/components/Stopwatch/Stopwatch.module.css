@@ -18,6 +18,10 @@ body {
     font-variation-settings:
     "wdth" 100;
     font-size: 5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .component {
@@ -27,4 +31,22 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+
+.startPause {
+    background-color: #8FBEFF80;
+    border-radius: 10px;
+    width: 15vw;
+    height: 7vh;
+    border: none;
+}
+
+.startPause:hover {
+    background-color: #73a9f480;
+}
+
+button {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 600;
+    font-style: normal;
 }
