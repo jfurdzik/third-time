@@ -1,0 +1,33 @@
+.comp button {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    border-radius: 10px;
+    border: none;
+    padding: 0;
+    background-color: #8FBEFF;
+    font-size: 1rem;
+}
+
+.work {
+    background-color: #0451BD50;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.break {
+    background-color: #8FBEFF;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

@@ -19,7 +19,6 @@ export default function Stopwatch() {
 
   return (
     <div className={styles.component}>
-      <p>toggle here</p>
       <div className={styles.timebox}>
         <span>{hours > 0 && <span>{hours}:</span>}<span>{minutes < 10 && 0}{minutes}</span>:<span>{seconds < 10 && 0}{seconds}</span></span>
       </div>
