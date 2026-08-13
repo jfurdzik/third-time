@@ -39,6 +39,7 @@ body {
     width: 15vw;
     height: 7vh;
     border: none;
+    font-size: 1rem;
 }
 
 .startPause:hover {
