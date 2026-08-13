@@ -23,7 +23,7 @@ export default function Stopwatch() {
         <span>{hours > 0 && <span>{hours}:</span>}<span>{minutes < 10 && 0}{minutes}</span>:<span>{seconds < 10 && 0}{seconds}</span></span>
       </div>
       {isRunning ? <button onClick={pause} className={styles.startPause}>pause</button> : <button onClick={start} className={styles.startPause}>start</button>}
-      <button onClick={reset}>Reset</button>
+      <button onClick={() => reset()}>Reset</button>
     </div>
   );
 }

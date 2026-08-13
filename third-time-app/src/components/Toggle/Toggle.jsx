@@ -9,14 +9,12 @@ export default function Toggle() {
 
     const handleToggle = () => {
         //flip mode
-        console.log("toggle button clicked");
         if (mode === "stopwatch") {
             setMode("timer");
         }
         else if (mode === "timer") {
             setMode("stopwatch");
         }
-        console.log("mode is", mode);
     };
 
     return (
