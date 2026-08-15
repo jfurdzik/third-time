@@ -24,7 +24,7 @@ export default function Stopwatch() {
         <span>{hours > 0 && <span>{hours}:</span>}<span>{minutes < 10 && 0}{minutes}</span>:<span>{seconds < 10 && 0}{seconds}</span></span>
       </div>
       {isRunning ? <button onClick={pause} className={styles.startPause}>pause</button> : <button onClick={start} className={styles.startPause}>start</button>}
-      <button className={styles.resetButton} onClick={() => reset(null, false)}><img src={resetImg} height={50} width={50}/></button>
+      <button className={styles.resetButton} onClick={() => reset(null, false)}><img src={resetImg} height={30} width={30}/></button>
     </div>
   );
 }

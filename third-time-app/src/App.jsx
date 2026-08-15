@@ -5,13 +5,13 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Stopwatch from './components/Stopwatch/Stopwatch'
 import Toggle from './components/Toggle/Toggle'
+import HomePage from './components/HomePage/HomePage'
 
 function App() {
 
   return (
     <div className='everything'>
-      <Toggle></Toggle>
-      <Stopwatch></Stopwatch>
+      <HomePage></HomePage>
     </div>
   )
 }
