@@ -32,13 +32,14 @@ export default function Timer({ expiryTimestamp }) {
       </div>
       {isRunning ? <button onClick={pause} className={styles.startPause}>pause</button>
       : (startedAlready ? <button onClick={resume} className={styles.startPause}>resume</button> : <button onClick={startAndFlag} className={styles.startPause}>start</button>)}
-      
-      <button onClick={() => {
-        // Restarts to 5 minutes timer
+
+      <button className={styles.resetButton} onClick={() => {
+        // Restarts to 10 minutes timer
         const time = new Date();
-        time.setSeconds(time.getSeconds() + 300);
-        restart(time)
-      }}>Restart</button>
+        time.setSeconds(time.getSeconds() + 600);
+        setStartedAlready(false); //reset this flag since we are restarting timer without autostart
+        restart(time, false);
+      }}><img src={resetImg} height={30} width={30}/></button>
     </div>
   );
 }

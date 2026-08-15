@@ -1,0 +1,52 @@
+.timebox {
+    background-color: #D89EFF80;
+    border-radius: 20px;
+    width: 30vw;
+    height: 30vh;
+
+    /* font stuff */
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    font-size: 5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.component {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.startPause {
+    background-color: #D89EFF80;
+    border-radius: 10px;
+    width: 15vw;
+    height: 7vh;
+    border: none;
+    font-size: 1rem;
+}
+
+.startPause:hover {
+    background-color: #c166fd80;
+}
+
+button {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.resetButton {
+    background: none;
+    border: none;
+}
