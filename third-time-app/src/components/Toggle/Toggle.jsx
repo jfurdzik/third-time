@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from './Toggle.module.css';
 
-export default function Toggle() {
+export default function Toggle({ updateMode }) {
     const [mode, setMode] = useState("stopwatch");
     const toggleClassWork = mode === "stopwatch" ? styles.workActive : styles.workNotActive;
     const toggleClassBreak = mode === "timer" ? styles.breakActive : styles.breakNotActive;
@@ -11,9 +11,11 @@ export default function Toggle() {
         //flip mode
         if (mode === "stopwatch") {
             setMode("timer");
+            updateMode("timer"); //parent callback
         }
         else if (mode === "timer") {
             setMode("stopwatch");
+            updateMode("stopwatch"); //parent callback
         }
     };
 
