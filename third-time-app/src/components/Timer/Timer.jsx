@@ -4,7 +4,7 @@ import resetImg from '../../assets/reset.png';
 import { useTimer } from 'react-timer-hook';
 import { useState } from "react";
 
-export default function Timer({ expiryTimestamp }) {
+export default function Timer({ expiryTimestamp, thirdAmt }) {
   const {
     totalSeconds,
     milliseconds,
@@ -34,9 +34,9 @@ export default function Timer({ expiryTimestamp }) {
       : (startedAlready ? <button onClick={resume} className={styles.startPause}>resume</button> : <button onClick={startAndFlag} className={styles.startPause}>start</button>)}
 
       <button className={styles.resetButton} onClick={() => {
-        // Restarts to 10 minutes timer
+        // Restarts to now + third time amt in seconds generated outside and passed in
         const time = new Date();
-        time.setSeconds(time.getSeconds() + 600);
+        time.setSeconds(time.getSeconds() + thirdAmt);
         setStartedAlready(false); //reset this flag since we are restarting timer without autostart
         restart(time, false);
       }}><img src={resetImg} height={30} width={30}/></button>

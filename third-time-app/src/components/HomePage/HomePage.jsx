@@ -29,7 +29,7 @@ export default function HomePage() {
         <>
             <img className={styles.logo} src={logo} height={100} width={100}/>
             <Toggle updateMode={handleCallback}></Toggle>
-            {mode === "stopwatch" ? <Stopwatch sendTotalTime={handleCallbackTime}></Stopwatch> : <Timer expiryTimestamp={generateCurrentExpiryTime}></Timer>}
+            {mode === "stopwatch" ? <Stopwatch sendTotalTime={handleCallbackTime}></Stopwatch> : <Timer expiryTimestamp={generateCurrentExpiryTime} thirdAmt={thirdSeconds}></Timer>}
         </>
     );
 }
