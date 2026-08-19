@@ -12,7 +12,8 @@
   "dependencies": {
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "react-timer-hook": "^4.0.6"
+    "react-timer-hook": "^4.0.6",
+    "react-tooltip": "^6.0.8"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

@@ -6,6 +6,7 @@ import './App.css'
 import Stopwatch from './components/Stopwatch/Stopwatch'
 import Toggle from './components/Toggle/Toggle'
 import HomePage from './components/HomePage/HomePage'
+import 'react-tooltip/dist/react-tooltip.css'
 
 function App() {
 

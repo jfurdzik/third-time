@@ -17,11 +17,13 @@ export default function HomePage() {
         }
     };
 
+    const [totalStopwatch, setTotalStopwatch] = useState("stopwatch");
     //timer callback gets data from stopwatch child component
     const [thirdSeconds, setThirdSeconds] = useState(0);
     const handleCallbackTime = (childTime) => {
         const third = childTime / 3; //this is a number (total seconds) not a date
         setThirdSeconds(third);
+        setTotalStopwatch(childTime);
     }
 
     //need this bc should capture current timestamp when switch not pause stamp (loses time when switching)
@@ -31,6 +33,7 @@ export default function HomePage() {
         return finalTime;
     }
 
+    //want to change this in future to be something on screen w sounds
     const expireAlert = () => {
         window.alert("Timer has finished. Time to get back to work!");
         setMode("stopwatch");
@@ -40,7 +43,7 @@ export default function HomePage() {
         <>
             <img className={styles.logo} src={logo} height={100} width={100}/>
             <Toggle timeMode={mode} handleToggle={flipMode} ></Toggle>
-            {mode === "stopwatch" ? <Stopwatch sendTotalTime={handleCallbackTime}></Stopwatch> : <Timer expiryTimestamp={generateCurrentExpiryTime} thirdAmt={thirdSeconds} expiryFunction={expireAlert}></Timer>}
+            {mode === "stopwatch" ? <Stopwatch sendTotalTime={handleCallbackTime}></Stopwatch> : <Timer expiryTimestamp={generateCurrentExpiryTime} thirdAmt={thirdSeconds} totalStopwatch={totalStopwatch} expiryFunction={expireAlert}></Timer>}
         </>
     );
 }

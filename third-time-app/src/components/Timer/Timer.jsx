@@ -3,8 +3,9 @@ import styles from './Timer.module.css';
 import resetImg from '../../assets/reset.png';
 import { useTimer } from 'react-timer-hook';
 import { useState } from "react";
+import { Tooltip } from 'react-tooltip';
 
-export default function Timer({ expiryTimestamp, thirdAmt, expiryFunction }) {
+export default function Timer({ expiryTimestamp, thirdAmt, totalStopwatch, expiryFunction }) {
   const {
     totalSeconds,
     milliseconds,
@@ -28,6 +29,10 @@ export default function Timer({ expiryTimestamp, thirdAmt, expiryFunction }) {
   return (
     <div className={styles.component}>
       <div className={styles.timebox}>
+        <div className={styles.tooltip}>
+            <a data-tooltip-id="my-tooltip" data-tooltip-content={`${totalStopwatch}/3≈${Math.floor(thirdAmt)}`} data-tooltip-place='right'>&#x1F6C8;</a>
+            <Tooltip id="my-tooltip" />
+        </div>
         <span>{hours > 0 && <span>{hours}:</span>}<span>{minutes < 10 && 0}{minutes}</span>:<span>{seconds < 10 && 0}{seconds}</span></span>
       </div>
       {isRunning ? <button onClick={pause} className={styles.startPause}>pause</button>

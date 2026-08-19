@@ -16,6 +16,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
+}
+
+.timebox a, .tooltip {
+    font-size: 24px;
 }
 
 .component {
@@ -49,4 +55,10 @@ button {
 .resetButton {
     background: none;
     border: none;
+}
+
+.tooltip {
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
