@@ -4,7 +4,7 @@ import resetImg from '../../assets/reset.png';
 import { useTimer } from 'react-timer-hook';
 import { useState } from "react";
 
-export default function Timer({ expiryTimestamp, thirdAmt }) {
+export default function Timer({ expiryTimestamp, thirdAmt, expiryFunction }) {
   const {
     totalSeconds,
     milliseconds,
@@ -17,7 +17,7 @@ export default function Timer({ expiryTimestamp, thirdAmt }) {
     pause,
     resume,
     restart,
-  } = useTimer({ expiryTimestamp, onExpire: () => console.warn('onExpire called'), autoStart: false, interval: 20 });
+  } = useTimer({ expiryTimestamp, onExpire: expiryFunction, autoStart: false, interval: 20 });
 
   const [startedAlready, setStartedAlready] = useState(false);
   const startAndFlag = () => {

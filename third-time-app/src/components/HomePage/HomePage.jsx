@@ -7,9 +7,15 @@ import Timer from "../Timer/Timer";
 
 export default function HomePage() {
     const [mode, setMode] = useState("stopwatch");
-    const handleCallback = (childData) => {
-        setMode(childData);
-    }
+    const flipMode = () => {
+        //switch mode to opposite
+        if (mode === "stopwatch") {
+            setMode("timer");
+        }
+        else if (mode === "timer") {
+            setMode("stopwatch");
+        }
+    };
 
     //timer callback gets data from stopwatch child component
     const [thirdSeconds, setThirdSeconds] = useState(0);
@@ -25,11 +31,16 @@ export default function HomePage() {
         return finalTime;
     }
 
+    const expireAlert = () => {
+        window.alert("Timer has finished. Time to get back to work!");
+        setMode("stopwatch");
+    };
+
     return(
         <>
             <img className={styles.logo} src={logo} height={100} width={100}/>
-            <Toggle updateMode={handleCallback}></Toggle>
-            {mode === "stopwatch" ? <Stopwatch sendTotalTime={handleCallbackTime}></Stopwatch> : <Timer expiryTimestamp={generateCurrentExpiryTime} thirdAmt={thirdSeconds}></Timer>}
+            <Toggle timeMode={mode} handleToggle={flipMode} ></Toggle>
+            {mode === "stopwatch" ? <Stopwatch sendTotalTime={handleCallbackTime}></Stopwatch> : <Timer expiryTimestamp={generateCurrentExpiryTime} thirdAmt={thirdSeconds} expiryFunction={expireAlert}></Timer>}
         </>
     );
 }
